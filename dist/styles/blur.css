@@ -1,0 +1,6 @@
+.blur {
+  margin-top: 250px;
+  position: absolute;
+  box-shadow: 0 0 1000px 50px var(--primary-color);
+  z-index: -100;
+}
