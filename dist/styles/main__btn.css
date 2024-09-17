@@ -1,0 +1,67 @@
+.main__btn {
+  position: relative;
+  background: var(--bg);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 1.5em;
+  padding: 10px 30px;
+  transition: all ease 0.5s;
+  outline: 1px solid var(--primary-color-extra-light);
+  border: none;
+  top: 100px;
+  left: 100px;
+}
+
+.main__btn:hover {
+  letter-spacing: 1px;
+  box-shadow: 0 0 30px var(--primary-color);
+  outline: 2px solid var(--primary-color);
+}
+.main__btn::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+}
+.main__btn span {
+  position: relative;
+  z-index: 1;
+}
+.main__btn i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.main__btn i::before {
+  content: "";
+  position: absolute;
+  top: -4.5px;
+  left: 80%;
+  border: 2px solid var(--primary-color-fade);
+  width: 10px;
+  height: 5px;
+  background: var(--primary-color-fade);
+  transition: ease 0.5s all;
+}
+.main__btn:hover i::before {
+  width: 30px;
+  left: 20%;
+  background: var(--bg);
+}
+
+.main__btn i::after {
+  content: "";
+  position: absolute;
+  bottom: -4.5px;
+  right: 80%;
+  border: 2px solid var(--primary-color-fade);
+  width: 10px;
+  height: 5px;
+  background: var(--primary-color-fade);
+  transition: ease 0.5s all;
+}
+
+.main__btn:hover i::after {
+  width: 30px;
+  right: 20%;
+  background: var(--bg);
+}

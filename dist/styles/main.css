@@ -1,12 +1,13 @@
 @import "root.css";
 @import "navbar.css";
-@import "hero.css";
-@import "blur.css";
 @import "__btn.css";
+@import "main__btn.css";
+/* @import "hero.css"; */
+/* @import "blur.css"; */
+/* @import "primaryButton.css"; */
 
 .__container {
   max-width: 1200px;
   margin: auto;
   pad: 5rem 2rem;
 }
-
