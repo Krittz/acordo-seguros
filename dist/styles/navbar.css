@@ -30,7 +30,8 @@
 }
 
 .nav__logo img {
-  max-width: 5rem;
+  max-width: 10rem;
+  margin-left: -2rem;
 }
 
 .nav__toggle {
@@ -191,6 +192,7 @@
   .nav {
     height: calc(var(--header-height) + 2rem);
     display: flex;
+    align-items: baseline;
     justify-content: space-between;
   }
   .nav__logo {
@@ -198,8 +200,7 @@
     cursor: alias;
   }
   .nav__logo img {
-    max-width: 205px;
-    margin-top: 30px;
+    max-width: 12rem;
   }
   .nav__toggle {
     display: none;
