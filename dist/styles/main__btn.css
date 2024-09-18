@@ -4,12 +4,12 @@
   color: var(--primary-color);
   text-transform: uppercase;
   font-size: 1.5em;
+  width: fit-content;
   padding: 10px 30px;
   transition: all ease 0.5s;
   outline: 1px solid var(--primary-color-extra-light);
   border: none;
-  top: 100px;
-  left: 100px;
+  justify-self: center;
 }
 
 .main__btn:hover {
