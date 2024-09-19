@@ -14,6 +14,7 @@
   width: 100%;
 }
 .home__data {
+  position: relative;
   height: 75vh;
   display: flex;
   justify-content: center;
@@ -21,6 +22,37 @@
   flex-direction: column;
   row-gap: 2rem;
 }
+
+.home__data .bg {
+  top: 10rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: -11;
+}
+.home__data .bg :nth-child(1) {
+  position: absolute;
+  top: -170px;
+  left: 0;
+  opacity: 20%;
+  z-index: -12;
+}
+.home__data .bg :nth-child(2) {
+  z-index: -12;
+  position: absolute;
+  right: 0;
+  opacity: 20%;
+}
+.home__data .bg :nth-child(3),
+.home__data .bg :nth-child(4) {
+  opacity: 25%;
+  width: 100vw;
+}
+
 .home__stars {
   color: var(--primary-color-fade);
   text-align: center;
@@ -30,19 +62,40 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: var(--text-color);
+  color: var(--title-color);
   text-transform: uppercase;
   font-weight: 900;
   font-size: 5.5rem;
   text-shadow: 0px 4px 7px var(--primary-color);
+  user-select: none;
 }
 .home__title :nth-child(1) {
   margin-top: -3rem;
   text-align: center;
 }
+.bg__watermark {
+  color: #5353533a;
+  font-size: clamp(6rem, 1.3333rem + 14.9333vw, 20rem);
+  font-weight: 900;
+  position: absolute;
+  z-index: -2000;
+  transform: translateY(-45%) translateX(-10%);
+  user-select: none;
+  opacity: 30%;
+}
+.home__description {
+  color: var(--text-color);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
 @media (max-width: 768px) {
   .home__data {
+    margin-top: 5rem;
     max-height: 60vh;
+  }
+  .home__data .bg:nth-child(1) {
+    margin-top: -150px;
   }
   .home__title {
     display: flex;
@@ -59,12 +112,14 @@
     margin-top: 0;
     text-align: center;
   }
+  .bg__watermark {
+    transform: translateX(0) translateY(-35%);
+  }
+
 }
 .home__subtitle {
   color: var(--primary-color-extra-light);
   font-weight: 100;
+  margin-bottom: 4rem;
   text-align: center;
-}
-.home__data .main__btn {
-  margin-top: 2rem;
 }

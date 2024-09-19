@@ -129,7 +129,7 @@
 }
 
 .dropdown__container {
-  background-color: var(--bg-semi);
+  background-color: var(--bg-fade);
   height: 0;
   overflow: hidden;
   transition: height 0.4s;
@@ -240,7 +240,8 @@
     left: 0;
     right: 0;
     top: 6.5rem;
-    background-color: var(--bg);
+    background-color: var(--bg-fade);
+    backdrop-filter: blur(6px);
     box-shadow: inset 0 -1px 1px var(--primary-color);
     pointer-events: none;
     opacity: 0;
@@ -314,5 +315,8 @@
 @media screen and (min-width: 1152px) {
   .wrapper {
     margin-inline: auto;
+  }
+  .header {
+    background: none;
   }
 }
