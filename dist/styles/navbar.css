@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background: var(--bg);
   z-index: var(--z-fixed);
 }
@@ -252,7 +252,7 @@
   .dropdown__content {
     grid-template-columns: repeat(4, max-content);
     column-gap: 6rem;
-    max-width: 1120px;
+    width: 1120px;
     margin-inline: auto;
   }
 

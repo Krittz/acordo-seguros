@@ -30,18 +30,19 @@
     <meta name="twitter:image" content="https://www.acordoseguros.com.br/assets/images/logo.png">
 
 
-
     <!-- Styles -->
     <link rel="stylesheet" href="dist/styles/main.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
     <header class="header">
         <nav class="nav wrapper">
             <div class="nav__data">
-                <a href="/" class="nav__logo">
+                <a href="/" class="nav__logo" data-aos="fade-down">
                     <img src="dist/assets/images/logo.svg" alt="Logotipo Acordo Seguros" loading="lazy">
                 </a>
 
@@ -55,10 +56,10 @@
                 <ul class="nav__list">
 
 
-                    <li><a href="/" class="nav__link">Início</a></li>
+                    <li data-aos="fade-left" data-aos-delay="500"><a href="/" class="nav__link">Início</a></li>
 
                     <li class="dropdown__item">
-                        <div class="nav__link dropdown__button">
+                        <div class="nav__link dropdown__button" data-aos="fade-left" data-aos-delay="250">
                             Seguros<i class="ri-arrow-down-s-line dropdown__arrow"></i>
                         </div>
                         <div class="dropdown__container">
@@ -106,7 +107,8 @@
                             </div><!--//dropdown__content-->
                         </div><!--//dropdown__container-->
                     </li>
-                    <li><a href="#contato" class="nav__link contact__btn">Contato</a></li>
+                    <li data-aos="fade-left" data-aos-delay="100"><a href="#contato"
+                            class="nav__link contact__btn">Contato</a></li>
                 </ul>
             </div>
         </nav>
@@ -150,20 +152,43 @@
                     <i class="ri-arrow-down-wide-fill arrow__down"></i>
                 </div>
             </div>
-            <div class="banner__links">
-                <a href="#"><i class="ri-whatsapp-line"></i></a>
-                <a href="#"><i class="ri-instagram-line"></i></a>
-                <a href="#"><i class="ri-facebook-circle-fill"></i></a>
-                <a href="#"><i class="ri-twitter-x-line"></i></a>
+            <div class="banner__links" data-aos="fade-down" data-aos-delay="200">
+                <a href="https://www.instagram.com/acordocorretoradeseguros/" target="_blank" data-aos="fade-right"
+                    data-aos-delay="300">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a target="_blank" data-aos="fade-right" data-aos-delay="400"
+                    href="https://api.whatsapp.com/send/?phone=5538999838896&text=Olá%20Acordo%20Seguros,%20encontrei%20vocês%20pelo%20site.%0A%0AEu%20gostaria%20de%20saber%20mais%20sobre%20serviços.&app_absent=0">
+                    <i class="ri-whatsapp-line"></i>
+                </a>
+
+                <a href="mailto:acordo@acordoseguros.com?subject=Contato%20do%20site&body=Olá%20Acordo%20Seguros,%20encontrei%20vocês%20pelo%20site.%0A%0AEu%20gostaria%20de%20saber%20mais%20sobre%20serviços."
+                    target="_blank" data-aos="fade-right" data-aos-delay="500"><i class="ri-mail-send-fill"></i></a>
+
+
             </div>
 
+        </section>
+        <section class="insurances">
+            <div class="insurances__container container">
+                <div class="insurances__data">
+                    <div class="bg">
+                        <img src="./dist/assets/images/bg-img-left.svg" alt="Background" loading="lazy">
+                        <img src="./dist/assets/images/bg-img-right.svg" alt="Background" loading="lazy">
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
 
+
     <!-- Scripts -->
     <script src="./dist/scripts/navbar.js" defer></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
