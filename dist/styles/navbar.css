@@ -32,6 +32,7 @@
 .nav__logo img {
   max-width: 10rem;
   margin-left: -2rem;
+  filter: drop-shadow(0 0 5px #000);
 }
 
 .nav__toggle {

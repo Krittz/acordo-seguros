@@ -1,0 +1,41 @@
+.banner__links {
+  position: absolute;
+  top: 45%;
+  left: 2.5rem;
+  display: grid;
+  justify-items: center;
+  row-gap: 0.5rem;
+}
+.banner__links > * {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+.banner__links > *:hover {
+  filter: brightness(1.75);
+  transform: scale(1.5);
+}
+.banner__links::before {
+  position: absolute;
+  content: "";
+  top: -4.5rem;
+  width: 7rem;
+  height: 2px;
+  transform: rotate(90deg);
+  background: var(--secondary-color);
+}
+.banner__links::after {
+  position: absolute;
+  content: "";
+  width: 3.5rem;
+  height: 2px;
+  bottom: -3rem;
+  transform: rotate(90deg);
+  background: var(--secondary-color);
+}
+@media (max-width: 768px) {
+  .banner__links {
+    display: none;
+  }
+}

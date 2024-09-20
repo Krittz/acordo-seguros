@@ -2,11 +2,8 @@
 @import "navbar.css";
 @import "__btn.css";
 @import "main__btn.css";
-@import "home.css";
-/* @import "hero.css"; */
-/* @import "blur.css"; */
-/* @import "primaryButton.css"; */
-
+@import "hero.css";
+@import "social.css";
 .__container {
   max-width: 1200px;
   margin: auto;
@@ -37,7 +34,7 @@
   transition: all 0.3s ease;
 }
 .arrow__down:hover {
-  font-size: 1.5em;
+  transform: scale(1.5);
   cursor: pointer;
 }
 .arrows {
