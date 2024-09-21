@@ -1,6 +1,8 @@
+// Função para mostrar o menu no clique
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId);
+
   toggle.addEventListener("click", () => {
     nav.classList.toggle("show-menu");
     toggle.classList.toggle("show-icon");
@@ -9,6 +11,7 @@ const showMenu = (toggleId, navId) => {
 
 showMenu("nav-toggle", "nav-menu");
 
+// Dropdown Menu - Clique para expandir e hover
 const dropdownItems = document.querySelectorAll(".dropdown__item");
 
 dropdownItems.forEach((item) => {
@@ -21,6 +24,20 @@ dropdownItems.forEach((item) => {
     if (showDropdown && showDropdown !== item) {
       toggleItem(showDropdown);
     }
+  });
+
+  // Abre o menu ao passar o mouse (hover)
+  item.addEventListener("mouseenter", () => {
+    item.classList.add("hover-dropdown");
+    const dropdownContainer = item.querySelector(".dropdown__container");
+    dropdownContainer.style.height = dropdownContainer.scrollHeight + "px";
+  });
+
+  // Fecha o menu ao tirar o mouse (hover out)
+  item.addEventListener("mouseleave", () => {
+    const dropdownContainer = item.querySelector(".dropdown__container");
+    dropdownContainer.style.height = "0";
+    item.classList.remove("hover-dropdown");
   });
 });
 
@@ -36,6 +53,7 @@ const toggleItem = (item) => {
   }
 };
 
+// Remover estilos ao redimensionar a janela
 const mediaQuery = matchMedia("(min-width: 1118px)"),
   dropdownContainer = document.querySelectorAll(".dropdown__container");
 

@@ -10,12 +10,13 @@
   font-size: 1.5rem;
   line-height: 1.5;
   color: var(--primary-color);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease ;
 }
 .banner__links > *:hover {
   filter: brightness(1.75);
-  transform: scale(1.5);
+  transform: scale(1.75) ;
 }
+
 .banner__links::before {
   position: absolute;
   content: "";
