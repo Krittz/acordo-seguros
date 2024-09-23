@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .hero__container {
   display: flex;
@@ -109,7 +109,6 @@
     margin-top: 100px;
   }
   .hero__data {
-    height: 100%;
     padding: 10px;
   }
   .hero__data .bg:nth-child(1) {
@@ -136,7 +135,7 @@
     width: 100%;
   }
   .arrows {
-    margin-top: 9rem;
+    display: none;
   }
   .hero__title :nth-child(2) {
     transform: translateY(0);
