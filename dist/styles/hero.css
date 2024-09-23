@@ -74,8 +74,9 @@
 .hero__title :nth-child(1) {
   font-size: 4rem;
   margin-top: -3rem;
-  filter: brightness(0.75);
+  filter: brightness(0.9);
   text-align: center;
+  text-shadow: 2px 2px 0px var(--primary-color);
 }
 .bg__watermark {
   color: #5353533a;
@@ -137,7 +138,6 @@
   cursor: pointer;
 }
 .arrows {
-  margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
