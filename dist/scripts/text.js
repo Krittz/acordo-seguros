@@ -1,5 +1,5 @@
 const textElement = document.getElementById("variant__text");
-const texts = ["Agilidade", "Qualidade", "Confiança"];
+const texts = ["Agilidade", "Qualidade", "Credibilidade"];
 let textIndex = 0;
 let charIndex = 0;
 let currentText = "";
