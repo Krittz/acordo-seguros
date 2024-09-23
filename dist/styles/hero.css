@@ -63,6 +63,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   color: var(--title-color);
   text-transform: uppercase;
   font-weight: 900;
@@ -81,8 +82,8 @@
   font-size: clamp(6rem, 1.3333rem + 14.9333vw, 20rem);
   font-weight: 900;
   position: absolute;
-  z-index: -2000;
-  transform: translateY(-45%) translateX(-10%);
+  z-index: -9000000;
+  transform: translateY(-45%) translateX(-20%);
   user-select: none;
   opacity: 30%;
 }
@@ -109,7 +110,6 @@
     text-transform: uppercase;
     font-weight: 900;
     font-size: 3em;
-    text-shadow: 0px 0px 50px var(--primary-color);
   }
   .hero__title :nth-child(1) {
     margin-top: 0;
@@ -161,5 +161,23 @@
   }
   100% {
     color: var(--primary-color);
+  }
+}
+
+#variant__text {
+  border-right: 2px solid var(--primary-color);
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  height: 5.5rem;
+}
+
+.typing {
+  animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  50% {
+    border-color: transparent;
   }
 }
