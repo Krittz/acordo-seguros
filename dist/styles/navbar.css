@@ -60,12 +60,15 @@
 }
 
 @media screen and (max-width: 1118px) {
+  .header{
+    width: 100vw;
+  }
   .nav__menu {
     background-color: var(--bg);
     position: absolute;
     left: 0;
     top: 2.5rem;
-    width: 100%;
+    width: 100vw;
     height: calc(100vh - 3.5rem);
     overflow: auto;
     padding-block: 1.5rem 4rem;
