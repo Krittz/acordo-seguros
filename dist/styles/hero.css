@@ -113,7 +113,7 @@
 }
 .hero__description {
   margin-top: 1rem;
-  color: var(--primary-color);
+  color: var(--text-color);
   text-align: center;
   font-size: 1.2em;
   max-width: 40%;
