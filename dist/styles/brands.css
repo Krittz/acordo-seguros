@@ -5,6 +5,7 @@
   border-bottom: 1px solid var(--primary-color-fade);
   border-top: 1px solid var(--primary-color-fade);
   padding: 20px 0;
+  background: var(--primary-color);
 }
 
 .brand-carousel {
@@ -19,7 +20,8 @@
 
 .brand-carousel-item img {
   width: 100px;
-  /* filter: grayscale(100%); */
+  height: 100%;
+  filter: grayscale(100%);
   object-fit: contain;
 }
 
