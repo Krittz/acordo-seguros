@@ -204,6 +204,9 @@ textarea:focus ~ label {
 .input__group input[type="submit"]:hover {
   box-shadow: 0 0 30px var(--primary-color);
   outline: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: var(--bg);
+  transform: scale(1.1);
 }
 
 @media (max-width: 1100px) {

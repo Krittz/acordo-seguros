@@ -44,17 +44,23 @@
 .footer__col ul li:not(:last-child) {
   margin-bottom: 10px;
 }
-.footer__col ul li a {
+.footer__col ul li a,
+.footer__col ul li p {
   font-size: 1em;
-  text-transform: capitalize;
   color: var(--text-color);
   font-weight: 300;
   display: block;
   transition: all 0.3s ease;
 }
+.footer__col ul li p {
+  cursor: text;
+}
+.footer__col ul li p span {
+  color: var(--primary-color-fade);
+  transition: all 0.3s ease;
+}
 .footer__col ul li a:hover {
   color: var(--primary-color);
-  transform: scale(1.1);
 }
 .footer__col .footer__social__links a {
   display: inline-block;
