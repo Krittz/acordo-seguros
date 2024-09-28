@@ -95,4 +95,8 @@
     padding-left: 1rem;
     gap: 1rem;
   }
+  footer {
+    position: absolute;
+    bottom: -1000%;
+  }
 }
