@@ -17,7 +17,7 @@
   flex-direction: column;
 }
 .row .col .left {
-  flex-basis: 35%;
+  flex-basis: 40%;
   min-width: 320px;
   margin-left: 60px;
 }
@@ -115,104 +115,19 @@
   color: var(--primary-color);
   font-size: 24px;
 }
-
-.row .right .message__form {
+.right {
+  width: 75%;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 7px;
 }
-.row .right .input__group {
-  margin: 18px 0px;
-  position: relative;
-}
-.message__form .half__width {
-  flex-basis: 48%;
-}
-.message__form .full__width {
-  flex-basis: 100%;
-}
-.message__form input[type="text"],
-.message__form input[type="email"],
-.message__form textarea {
-  margin-top: 20px;
+.right iframe {
+  opacity: 70%;
   width: 100%;
-  font-size: 18px;
-  padding: 2px 0px;
-  background: none;
-  color: var(--text-color);
-  border: none;
-  border-bottom: 2px solid var(--primary-color);
-  outline: none;
-}
-.message__form textarea {
-  resize: none;
-  height: 220px;
-  display: block;
-}
-
-textarea::-webkit-scrollbar {
-  width: 5px;
-}
-textarea::-webkit-scrollbar-track {
-  background: var(--primary-color);
-  border-radius: 20px;
-}
-textarea::-webkit-scrollbar-thumb {
-  background: var(--secondary-color);
-  border-radius: 20px;
-}
-.input__group label {
-  position: absolute;
-  left: 0;
-  bottom: 4px;
-  color: var(--primary-color-extra-light);
-  font-size: 16px;
-  transition: all 0.3s ease;
-  pointer-events: none;
-  font-weight: 200;
-}
-.input__group:nth-child(4) label {
-  top: 5px;
-}
-.input__group input:focus ~ label,
-.input__group:nth-child(4):focus ~ label,
-.input__group input:valid ~ label,
-.input__group:nth-child(4):valid ~ label {
-  transform: translateY(-30px);
-  font-size: 14px;
-  color: var(--primary-color-fade);
-}
-textarea:focus ~ label {
-  transform: translateY(-30px);
-  font-size: 14px;
-  color: var(--primary-color-fade);
-}
-.input__group input[type="submit"] {
-  background: var(--bg);
-  color: var(--primary-color);
-  text-transform: uppercase;
-  font-size: 1.5em;
-  width: fit-content;
-  padding: 10px 30px;
-  transition: all ease 0.5s;
-  outline: 1px solid var(--primary-color-extra-light);
-  border: none;
-  justify-self: center;
-  cursor: pointer;
-}
-.input__group input[type="submit"]:hover {
-  box-shadow: 0 0 30px var(--primary-color);
-  outline: 1px solid var(--primary-color);
-  background: var(--primary-color);
-  color: var(--bg);
-  transform: scale(1.1);
-}
-
-@media (max-width: 1100px) {
-  .message__form .half__width {
-    flex-basis: 100%;
-  }
+  height: 100%;
+  filter: drop-shadow(0 5px 10px var(--primary-color));
 }
 @media (max-width: 900px) {
   .contact .row {
