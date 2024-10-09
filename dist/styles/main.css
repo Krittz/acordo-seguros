@@ -7,3 +7,22 @@
 @import "brands.css";
 @import "footer.css";
 @import "contact.css";
+@import "faq.css";
+
+.section__title {
+  position: relative;
+  font-size: 28px;
+  color: var(--title-color);
+  display: inline-block;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.section__title h4::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 1px;
+  background: var(--primary-color);
+  top: 120%;
+}
