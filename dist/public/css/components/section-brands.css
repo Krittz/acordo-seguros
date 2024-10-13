@@ -1,0 +1,100 @@
+:root {
+  --size: 100px;
+  --gap: 20px;
+  --duration: 60s;
+  --scroll-start: 0;
+  --scroll-end: calc(-100% - var(--gap));
+}
+.brands {
+  background: var(--bg);
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  height: 30vh;
+}
+
+.brands-title {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  text-align: center;
+  max-width: 40%;
+  position: relative;
+}
+.brands-title :first-child {
+  position: relative;
+  color: var(--title-color);
+  font-weight: 800;
+  font-size: 2rem;
+}
+.brands-title :first-child::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  top: 100%;
+  background: var(--primary-color);
+}
+.brands-title :last-child {
+  color: var(--text-color);
+  opacity: 50%;
+  font-size: 1em;
+}
+.brands-content {
+  height: 30%;
+  pointer-events: none;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  -webkit-mask-image: linear-gradient(
+    var(--mask-direction, to right),
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 20%,
+    hsl(0 0% 0% / 1) 80%,
+    hsl(0 0% 0% / 0)
+  );
+  mask-image: linear-gradient(
+    var(--mask-direction, to right),
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 20%,
+    hsl(0 0% 0% / 1) 80%,
+    hsl(0 0% 0% / 0)
+  );
+  background: var(--primary-color-fade);
+}
+.brands-group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  animation: scroll-x var(--duration) linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .brands-group {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(var(--scroll-start));
+  }
+  to {
+    transform: translateX(var(--scroll-end));
+  }
+}
+.brands img {
+  height: 80px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  filter: grayscale(100%) invert(10%);
+  margin-inline: 25px;
+}

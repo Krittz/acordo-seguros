@@ -1,0 +1,224 @@
+.consorcium {
+  background: var(--bg);
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 5rem;
+}
+.consorcium-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.consorcium-bg :first-child {
+  position: absolute;
+  z-index: -1;
+  left: 66%;
+  top: 10%;
+  opacity: 40%;
+}
+.consorcium-bg :nth-child(2) {
+  position: absolute;
+  z-index: -1;
+  left: 30%;
+  transform: rotate(-90deg);
+  top: 1%;
+  opacity: 20%;
+}
+.consorcium-bg :nth-child(3) {
+  position: absolute;
+  z-index: -1;
+  width: 40%;
+  top: 0;
+  opacity: 20%;
+}
+.consorcium-bg :last-child {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 30%;
+  transform: rotate(180deg);
+  opacity: 60%;
+}
+
+@media (max-width: 768px), (max-width: 1118px) {
+  .consorcium {
+    height: 100%;
+    padding-top: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .consorcium-bg img {
+    display: none;
+  }
+}
+.deck {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  margin: 5em auto 3em;
+}
+
+.deck:before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 95%;
+  top: -4.5em;
+  left: 0em;
+  border-radius: 8px;
+  background: #2c2f4562;
+}
+
+.card {
+  position: relative;
+  background-color: #30344c;
+  padding: 1em;
+  z-index: 5;
+  border-radius: 2px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.card + .card {
+  margin-top: 1em;
+}
+.card:hover {
+  z-index: 7;
+  transform: scale(1.05);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--primary-color);
+}
+.card:first-of-type {
+  margin-left: -3em;
+  margin-right: 3em;
+}
+
+.card:nth-of-type(2) {
+  margin-left: 20em;
+  margin-right: -20em;
+  margin-top: -6em;
+}
+.card:nth-of-type(3) {
+  margin-top: -2em;
+  margin-left: -1em;
+  margin-right: 1em;
+}
+@media (max-width: 705px) {
+  .deck {
+    margin: 4em auto;
+  }
+  .card:first-of-type {
+    margin-left: -1em;
+    margin-right: 1em;
+  }
+  .card:nth-of-type(2) {
+    margin-left: 1em;
+    margin-right: -1em;
+    margin-top: 1em;
+  }
+  .card:nth-of-type(3) {
+    margin-left: -1em;
+    margin-right: 1em;
+    margin-top: 1em;
+  }
+  .card:nth-of-type(3):after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1em;
+    display: block;
+    border-bottom: 5px solid var(--primary-color-fade);
+  }
+}
+
+@media (max-width: 550px) {
+  .deck:before {
+    left: 1.5em;
+  }
+  .card:first-of-type {
+    margin: 0;
+  }
+  .card:nth-of-type(2) {
+    margin: 1em 0 0;
+  }
+  .card:nth-of-type(3) {
+    margin: 1em 0 0;
+  }
+}
+.card-header {
+  display: grid;
+  grid-template-columns: 38px auto 100px;
+  align-items: center;
+  text-transform: uppercase;
+}
+.card-header i {
+  color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  background: var(--bg);
+  display: flex;
+  font-size: 1.5em;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.card-header-title {
+  color: var(--title-color);
+  font-size: 1em;
+  font-weight: 800;
+  margin-inline-start: 20px;
+}
+.card-header-detail {
+  margin: 10px;
+  color: var(--primary-color-fade);
+  font-size: 0.85em;
+  font-weight: 600;
+  text-align: right;
+}
+
+.card-body {
+  display: flex;
+  margin: 0 10px 10px;
+  position: relative;
+}
+.card-body .card-text {
+  margin: 0 10px 0 0;
+  white-space: pre-line;
+  color: var(--text-color);
+  opacity: 50%;
+  filter: drop-shadow(0 0 3px #000);
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.card-body .card-text .card-text-link a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+.card-body .card-text .card-text-link a:hover {
+  color: var(--text-color);
+  font-weight: 800;
+}
+.card-body .card-stats {
+  position: absolute;
+  background: var(--primary-color);
+  top: -10%;
+  right: -10%;
+  opacity: 0;
+  width: 50%;
+  height: 50%;
+  border-radius: 100%;
+  filter: blur(40px);
+  transition: all 0.3s ease;
+}
+.card:hover .card-body .card-stats {
+  opacity: 10%;
+}

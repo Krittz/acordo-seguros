@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordo Seguros | Soluções Personalizadas em Seguros de Vida, Auto, Residencial e Outros</title>
+
+    <!-- Favico -->
+    <link rel="icon" href="./public/assets/images/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./public/assets/images/favicon_io/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="./public/assets/images/favicon_io/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./public/assets/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="./public/assets/images/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="./public/assets/images/favicon_io/android-chrome-512x512.png">
+    <link rel="manifest" href="./public/assets/images/favicon_io/site.webmanifest">
+
+
+    <!-- Meta tags -->
+    <meta name="description"
+        content="Na Acordo Corretora de Seguros, oferecemos soluções personalizadas para proteger o que é mais importante para você. Atendimento rápido, transparente e confiável.">
+
+    <meta name="keywords"
+        content="seguros, corretora de seguros, seguros de vida, seguros automotivos, seguro residencial, seguros empresariais, Acordo Seguros">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.acordoseguros.com.br">
+
+    <meta property="og:title" content="Acordo Seguros - Corretora de Seguros com Qualidade e Credibilidade">
+    <meta property="og:description"
+        content="Oferecemos as melhores soluções em seguros para proteger o que é mais importante. Acordo Seguros garante sua tranquilidade com um atendimento personalizado e rápido.">
+    <meta property="og:image" content="https://www.acordoseguros.com.br/assets/images/logo.png">
+    <meta property="og:url" content="https://www.acordoseguros.com.br">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Acordo Seguros - Corretora de Seguros com Qualidade e Credibilidade">
+    <meta name="twitter:description"
+        content="Protegendo o que mais importa com soluções sob medida. Atendimento rápido e confiável.">
+    <meta name="twitter:image" content="https://www.acordoseguros.com.br/assets/images/logo.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/2bab216555.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <style>
+        :root {
+            --container: 120rem;
+            --primary: hsl(201.43, 13.21%, 58.43%);
+            --white: hsl(0, 0%, 100%);
+            --white-light: hsl(0, 0%, 99%);
+            --box-shadow: hsl(220, 7.32%, 91.96%);
+        }
+
+        .container {
+            max-width: var(--container);
+            padding: 0 1rem;
+            margin: 0 auto;
+        }
+
+        .container header {
+            text-align: center;
+        }
+
+        .section-heading {
+            margin: 3rem 0;
+            font-size: 4rem;
+            padding-bottom: 0.7rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-heading::before,
+        .section-heading::after {
+            content: '';
+            position: absolute;
+        }
+
+        .section-heading::before {
+            width: 100%;
+            height: 0.2rem;
+            bottom: 0;
+            left: 0;
+            background: var(--primary);
+            border-radius: 0.2rem;
+        }
+
+        .section-heading::after {
+            bottom: -0.4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1rem;
+            height: 1rem;
+            border: 0.2rem solid var(--primary);
+            background: var(--box-shadow);
+        }
+
+        .tab-container {
+            width: 70%;
+            margin: 0 auto 3rem auto;
+            box-shadow: 0 0.8rem 1rem var(--box-shadow);
+        }
+
+        @media (max-width: 767px) {
+            .tab-container {
+                width: 90%;
+            }
+        }
+
+        .tab-filter-container {
+            padding: 2rem;
+            text-align: center;
+            background: hsl(205.71, 30.43%, 95.49%);
+        }
+
+        .filter-btn {
+            display: inline-flex;
+            padding: 0.8rem 2.5rem;
+            cursor: pointer;
+            border-radius: 2rem;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .tab-filter-item-container {
+            background: var(--white);
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tab-item {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            padding: 0rem 3rem;
+            transform: translateY(100%);
+            background: var(--white-light);
+            transition: transform 0.5s ease-in-out;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+            place-items: center start;
+        }
+
+        .tab-img {
+            width: 30rem;
+        }
+
+        .tab-heading {
+            padding: 2rem 0;
+            font-size: 3rem;
+        }
+
+        .tab-item.select_tab {
+            transform: translateY(0);
+            transition: transform 0.5s ease-in-out;
+            background: var(--white-light);
+            animation: feadIn 0.6s ease-in-out;
+        }
+
+        .btn-primary {
+            margin-top: 1.5rem;
+            display: inline-block;
+            background: var(--primary);
+            padding: 0.6rem 2rem;
+            border-radius: 2rem;
+            color: var(--white);
+        }
+
+        @keyframes feadIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav">
+            <div class="nav-data">
+                <a href="index.html" class="nav-logo">
+                    <img src="./public/assets/images/logos/logo.svg" alt="Logo Acordo Corretora de Seguros .ltda">
+                </a>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="ri-menu-3-fill nav-toggle-menu"></i>
+                    <i class="ri-close-line nav-toggle-close"></i>
+                </div>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#section" class="nav-link">Início</a></li>
+                    <li class="dropdown-item">
+                        <a href="#section" class="nav-link dropdown-button">Serviços Financeiros<i
+                                class="ri-arrow-down-s-line dropdown-arrow"></i></a>
+                        <div class="dropdown-container">
+                            <div class="dropdown-content">
+                                <div class="dropdown-group">
+                                    <div class="dropdown-icon">
+                                        <i class="ri-shield-check-line"></i>
+                                    </div>
+                                    <span class="dropdown-title">Seguros</span>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#" class="dropdown-link">Saúde</a></li>
+                                        <li><a href="#" class="dropdown-link">Automotivo</a></li>
+                                        <li><a href="#" class="dropdown-link">Residencial</a></li>
+                                        <li><a href="#" class="dropdown-link">Empresarial</a></li>
+                                        <li><a href="#" class="dropdown-link">Odontológico</a></li>
+                                        <li><a href="#" class="dropdown-link">Vida e Previdência</a></li>
+                                        <li><a href="#" class="dropdown-link">Acidentes pessoais</a></li>
+                                        <li><a href="#" class="dropdown-link">Transporte de Cargas</a></li>
+                                        <li><a href="#" class="dropdown-link">Responsabilidade Civil Geral</a></li>
+                                        <li><a href="#" class="dropdown-link">Responsabilidade Civil Profissional</a>
+                                        </li>
+                                        <li><a href="#" class="dropdown-link">Máquinas e Equipamentos Agrícolas</a></li>
+
+
+
+                                    </ul>
+                                </div>
+                                <div class="dropdown-group">
+                                    <div class="dropdown-icon">
+                                        <i class="ri-money-dollar-circle-line"></i>
+                                    </div>
+                                    <span class="dropdown-title">Consórcio</span>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#" class="dropdown-link">Serviços</a></li>
+                                        <li><a href="#" class="dropdown-link">Imobiliário</a></li>
+                                        <li><a href="#" class="dropdown-link">Automotivo</a></li>
+
+
+                                    </ul>
+                                </div>
+                                <div class="dropdown-group">
+                                    <div class="dropdown-icon">
+                                        <i class="ri-bank-fill"></i>
+                                    </div>
+                                    <span class="dropdown-title">Financiamento e Refinanciamento</span>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#" class="dropdown-link">Automotivo</a></li>
+
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#section" class="nav-link">F.A.Q</a></li>
+                    <li><a href="#section" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+
+        <section class="hero">
+
+            <canvas id="canvas"></canvas>
+            <div class="heading">
+                <div class="hero-data">
+                    <div class="bg">
+                        <img id="bg-1" src="./public/assets/images/backgrounds-svg/bg-gradient-img1.svg"
+                            alt="Background" loading="lazy">
+                        <img id="bg-2" src="./public/assets/images/backgrounds-svg/bg-gradient-img2.svg"
+                            alt="Background" loading="lazy">
+                        <img id="bg-3" src="./public/assets/images/backgrounds-svg/circles-1.svg"
+                            alt="Círculos Decorativos" loading="lazy">
+                        <!-- <img id="bg-4" src="./public/assets/images/backgrounds-svg/circles-2.svg"
+                            alt="Círculos Decorativos" loading="lazy" style="z-index: -1;"> -->
+                        <span class="bg-watermark">
+                            <img src="./public/assets/images/logos/logo-clean.svg"
+                                alt="Logotipo Acordo Corretora de Seguros como Marca D'água">
+                        </span>
+                    </div>
+                    <div class="hero-content">
+                        <div class="hero-title">
+                            <h1>Acordo</h1>
+                            <h2>Corretora de Seguros</h2>
+                            <span id="variant-text"></span>
+                        </div>
+                        <h3 class="hero-subtitle">
+                            Esse é o nosso acordo com você.
+                        </h3>
+                        <p class="hero-description">
+                            Protegendo o que mais importa com soluções sob
+                            medida. Garantimos sua tranquilidade com um atendimento personalizado, transparente e
+                            rápido, para que você esteja sempre protegido contra imprevistos.
+                        </p>
+
+
+                        <a href="https://api.whatsapp.com/send/?phone=5538999838896&text=Olá%20Acordo%20Seguros,%20encontrei%20vocês%20pelo%20site.%0A%0AEu%20gostaria%20de%20saber%20mais%20sobre%20serviços.&app_absent=0"
+                            target="_blank" class="main-btn"><span>Fale Conosco</span><i></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="gradient-bg">
+                <div class="gradients-container">
+                    <div class="g1"></div>
+                    <div class="g2"></div>
+                    <div class="g3"></div>
+                    <div class="g4"></div>
+                    <div class="g5"></div>
+                    <div class="interactive"></div>
+                </div>
+            </div>
+            <div class="services-title">
+                <h2>Serviços</h2>
+                <p>Oferecemos uma ampla gama de soluções em seguros e serviços financeiros, cuidadosamente elaboradas
+                    para proteger você, sua família, seus bens e sua empresa.</p>
+            </div>
+
+            <div class="services-content">
+                <div class="box">
+                    <div class="box-content">
+                        <div class="box-icon"><i class="ri-shield-check-line"></i></div>
+                        <div class="box-text">
+                            <h3>Seguros</h3>
+                            <p>Proteja o que realmente importa com soluções de seguros sob medida, garantindo
+                                tranquilidade em todas as situações!</p>
+                            <a href="#">Ver mais</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-content">
+                        <div class="box-icon">
+                            <i class="ri-money-dollar-circle-line"></i>
+                        </div>
+                        <div class="box-text">
+                            <h3>Consórcios</h3>
+                            <p>Realize seus sonhos de forma planejada com os melhores consórcios para veículos, imóveis
+                                e serviços!</p>
+                            <a href="#">Ver mais</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box-content">
+                        <div class="box-icon">
+                            <i class="ri-bank-fill"></i>
+                        </div>
+                        <div class="box-text">
+                            <h3>Financiamento e Refinanciamento</h3>
+                            <p>Facilitamos a conquista do seu veículo com opções acessíveis de financiamento e
+                                refinanciamento, adaptadas às suas necessidades!</p>
+                            <a href="#">Ver mais</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="consorcium">
+            <div class="consorcium-bg">
+                <img src="./public/assets/images/backgrounds-svg/bg-arrows.svg" alt="Imagem decorativa de setas" />
+                <img src="./public/assets/images/backgrounds-svg/bg-arrows.svg" alt="Imagem decorativa de setas" />
+                <img src="./public/assets/images/backgrounds-svg/bg-dots.svg" alt="Imagem decorativa de múltiplos pontos" />
+                <img src="./public/assets/images/backgrounds-svg/bg-dots.svg" alt="Imagem decorativa de múltiplos pontos" />
+            </div>
+            <div class="brands-title">
+                <h2>Consórcios</h2>
+                <p></p>
+            </div>
+            <div class="deck">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="ri-home-4-line"></i>
+                        <span class="card-header-title">Consórcio Imobiliário</span>
+                        <span class="card-header-detail">32132</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Transforme o sonho da casa própria em realidade com o consórcio imobiliário da Acordo
+                            Seguros. Sem juros, você adquire seu imóvel com parcelas ajustadas ao seu orçamento, sem
+                            pressa e com total tranquilidade
+                            <span class="card-text-link">
+                                <a href="">
+                                    Quero saber mais
+                                </a>
+                            </span>
+                        </p>
+                        <div class="card-stats">
+                            <span class="card-stats-detail"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <i class="ri-roadster-fill"></i>
+                        <span class="card-header-title">Consórcio Automotivo</span>
+                        <span class="card-header-detail">32132</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Com o consórcio automotivo da Acordo Seguros, você conquista seu carro novo ou seminovo sem
+                            juros, com parcelas acessíveis e flexíveis, planejando sua compra de forma inteligente e
+                            segura.
+                            <span class="card-text-link">
+                                <a href="">
+                                    Quero saber mais
+                                </a>
+                            </span>
+                        </p>
+                        <div class="card-stats">
+                            <span class="card-stats-detail"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <i class="ri-tools-line"></i>
+                        <span class="card-header-title">Consórcio de Serviços</span>
+                        <span class="card-header-detail">32132</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Realize grandes projetos, como viagens, reformas ou estudos, com o consórcio de serviços da
+                            Acordo Seguros. Planeje suas conquistas sem juros, de forma prática e econômica.
+                            <span class="card-text-link">
+                                <a href="">
+                                    Quero saber mais
+                                </a>
+                            </span>
+                        </p>
+                        <div class="card-stats">
+                            <span class="card-stats-detail"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <section class="brands">
+            <div class="brands-title">
+                <h2>Parceiros</h2>
+                <p></p>
+            </div>
+            <div class="brands-content">
+
+                <div class="brands-group">
+                    <img src="./public/assets/images/brands-svg/brands.svg" alt="">
+                </div>
+                <div class="brands-group">
+                    <img src="./public/assets/images/brands-svg/brands.svg" alt="">
+                </div>
+                <div class="brands-group">
+                    <img src="./public/assets/images/brands-svg/brands.svg" alt="">
+                </div>
+
+            </div>
+        </section>
+        <!-- <section id="section3">
+            <div class="heading">
+
+            </div>
+        </section> -->
+
+
+
+
+    </main>
+    <footer></footer>
+    <script src="./public/js/main.js" defer></script>
+    <script src="./public/js/navbar.js" defer></script>
+    <script src="./public/js/background.js" defer></script>
+    <script src="./public/js/variant.text.js" defer></script>
+    <script src="./public/js/particles.js" defer></script>
+
+
+</body>
+
+</html>
