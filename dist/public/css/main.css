@@ -6,6 +6,7 @@
 @import "./components/section-services.css";
 @import "./components/section-consorcium.css";
 @import "./components/section-brands.css";
+@import "./components/section-insurances.css";
 
 :root {
   --bg: #1a1e29;

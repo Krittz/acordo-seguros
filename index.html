@@ -42,150 +42,14 @@
     <link rel="stylesheet" href="./dist/public/css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/2bab216555.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
-    <style>
-        :root {
-            --container: 120rem;
-            --primary: hsl(201.43, 13.21%, 58.43%);
-            --white: hsl(0, 0%, 100%);
-            --white-light: hsl(0, 0%, 99%);
-            --box-shadow: hsl(220, 7.32%, 91.96%);
-        }
 
-        .container {
-            max-width: var(--container);
-            padding: 0 1rem;
-            margin: 0 auto;
-        }
-
-        .container header {
-            text-align: center;
-        }
-
-        .section-heading {
-            margin: 3rem 0;
-            font-size: 4rem;
-            padding-bottom: 0.7rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-heading::before,
-        .section-heading::after {
-            content: '';
-            position: absolute;
-        }
-
-        .section-heading::before {
-            width: 100%;
-            height: 0.2rem;
-            bottom: 0;
-            left: 0;
-            background: var(--primary);
-            border-radius: 0.2rem;
-        }
-
-        .section-heading::after {
-            bottom: -0.4rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1rem;
-            height: 1rem;
-            border: 0.2rem solid var(--primary);
-            background: var(--box-shadow);
-        }
-
-        .tab-container {
-            width: 70%;
-            margin: 0 auto 3rem auto;
-            box-shadow: 0 0.8rem 1rem var(--box-shadow);
-        }
-
-        @media (max-width: 767px) {
-            .tab-container {
-                width: 90%;
-            }
-        }
-
-        .tab-filter-container {
-            padding: 2rem;
-            text-align: center;
-            background: hsl(205.71, 30.43%, 95.49%);
-        }
-
-        .filter-btn {
-            display: inline-flex;
-            padding: 0.8rem 2.5rem;
-            cursor: pointer;
-            border-radius: 2rem;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 500;
-        }
-
-        .filter-btn.active {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .tab-filter-item-container {
-            background: var(--white);
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tab-item {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            padding: 0rem 3rem;
-            transform: translateY(100%);
-            background: var(--white-light);
-            transition: transform 0.5s ease-in-out;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
-            place-items: center start;
-        }
-
-        .tab-img {
-            width: 30rem;
-        }
-
-        .tab-heading {
-            padding: 2rem 0;
-            font-size: 3rem;
-        }
-
-        .tab-item.select_tab {
-            transform: translateY(0);
-            transition: transform 0.5s ease-in-out;
-            background: var(--white-light);
-            animation: feadIn 0.6s ease-in-out;
-        }
-
-        .btn-primary {
-            margin-top: 1.5rem;
-            display: inline-block;
-            background: var(--primary);
-            padding: 0.6rem 2rem;
-            border-radius: 2rem;
-            color: var(--white);
-        }
-
-        @keyframes feadIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -385,7 +249,7 @@
                 <img src="./dist/public/assets/images/backgrounds-svg/bg-dots.svg"
                     alt="Imagem decorativa de múltiplos pontos" />
             </div>
-            <div class="brands-title">
+            <div class="consorcium-title">
                 <h2>Consórcios</h2>
                 <p></p>
             </div>
@@ -459,8 +323,13 @@
 
         </section>
 
-
-
+        <section class="insurances">
+            <div class="insurances-title">
+                <h2>Seguros</h2>
+                <p></p>
+            </div>
+            <div class="insurances-content"></div>
+        </section>
         <section class="brands">
             <div class="brands-title">
                 <h2>Parceiros</h2>
@@ -497,7 +366,10 @@
     <script src="./dist/public/js/variant.text.js" defer></script>
     <script src="./dist/public/js/particles.js" defer></script>
 
+    <script>
 
+
+    </script>
 </body>
 
 </html>

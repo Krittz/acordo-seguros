@@ -6,8 +6,36 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 5rem;
 }
+.consorcium-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  text-align: center;
+  max-width: 40%;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+}
+.consorcium-title :first-child {
+  position: relative;
+  color: var(--title-color);
+  font-weight: 800;
+  font-size: 2rem;
+}
+.consorcium-title :first-child::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  top: 100%;
+  background: var(--primary-color);
+}
+
 .consorcium-bg {
   width: 100%;
   height: 100%;
@@ -25,7 +53,7 @@
   z-index: -1;
   left: 30%;
   transform: rotate(-90deg);
-  top: 1%;
+  top: 5%;
   opacity: 20%;
 }
 .consorcium-bg :nth-child(3) {
@@ -60,7 +88,7 @@
   position: relative;
   max-width: 500px;
   width: 100%;
-  margin: 5em auto 3em;
+  margin: 3em auto 3em;
 }
 
 .deck:before {
@@ -104,7 +132,7 @@
   margin-top: -6em;
 }
 .card:nth-of-type(3) {
-  margin-top: -2em;
+  margin-top: -4.5em;
   margin-left: -1em;
   margin-right: 1em;
 }
