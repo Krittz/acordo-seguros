@@ -12,9 +12,10 @@ nav {
 }
 @media (max-width: 768px) {
   header {
-    position: sticky;
+    position: fixed;
   }
 }
+
 .nav-data {
   height: 100%;
   display: flex;
@@ -135,11 +136,12 @@ nav {
   font-size: 1.25rem;
   color: var(--secondary-color);
 }
-.dropdown-title {
+.dropdown-title a {
   font-size: 1rem;
   font-weight: 600;
   color: var(--secondary-color);
 }
+
 .dropdown-list {
   row-gap: 0.25rem;
 }
@@ -239,9 +241,10 @@ nav {
   .dropdown-icon i {
     font-size: 2rem;
   }
-  .dropdown-title {
+  .dropdown-title a {
     font-size: 1.25rem;
   }
+
   .dropdown-link {
     font-size: 1rem;
     transition: all 0.3s ease;

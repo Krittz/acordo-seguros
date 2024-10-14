@@ -40,11 +40,11 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./dist/public/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/2bab216555.js" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -68,7 +68,7 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li><a href="#section" class="nav-link">Início</a></li>
+                    <li><a href="#" class="nav-link">Início</a></li>
                     <li class="dropdown-item">
                         <a href="#section" class="nav-link dropdown-button">Serviços Financeiros<i
                                 class="ri-arrow-down-s-line dropdown-arrow"></i></a>
@@ -78,7 +78,7 @@
                                     <div class="dropdown-icon">
                                         <i class="ri-shield-check-line"></i>
                                     </div>
-                                    <span class="dropdown-title">Seguros</span>
+                                    <span class="dropdown-title"><a href="#insurances">Seguros</a></span>
                                     <ul class="dropdown-list">
                                         <li><a href="#" class="dropdown-link">Saúde</a></li>
                                         <li><a href="#" class="dropdown-link">Automotivo</a></li>
@@ -101,11 +101,11 @@
                                     <div class="dropdown-icon">
                                         <i class="ri-money-dollar-circle-line"></i>
                                     </div>
-                                    <span class="dropdown-title">Consórcio</span>
+                                    <span class="dropdown-title"><a href="#consortium">Consórcio</a></span>
                                     <ul class="dropdown-list">
-                                        <li><a href="#" class="dropdown-link">Serviços</a></li>
-                                        <li><a href="#" class="dropdown-link">Imobiliário</a></li>
-                                        <li><a href="#" class="dropdown-link">Automotivo</a></li>
+                                        <li><a href="#service-consortium" class="dropdown-link">Serviços</a></li>
+                                        <li><a href="#residential-consortium" class="dropdown-link">Imobiliário</a></li>
+                                        <li><a href="#automotive-consortium" class="dropdown-link">Automotivo</a></li>
 
 
                                     </ul>
@@ -114,7 +114,7 @@
                                     <div class="dropdown-icon">
                                         <i class="ri-bank-fill"></i>
                                     </div>
-                                    <span class="dropdown-title">Financiamento e Refinanciamento</span>
+                                    <span class="dropdown-title"><a href="#">Financiamento e Refinanciamento</a></span>
                                     <ul class="dropdown-list">
                                         <li><a href="#" class="dropdown-link">Automotivo</a></li>
 
@@ -177,7 +177,7 @@
             </div>
         </section>
 
-        <section class="services">
+        <section class="services" id="services">
             <div class="gradient-bg">
                 <div class="gradients-container">
                     <div class="g1"></div>
@@ -188,13 +188,13 @@
                     <div class="interactive"></div>
                 </div>
             </div>
-            <div class="services-title">
+            <div class="services-title" data-aos="fade-up">
                 <h2>Serviços</h2>
                 <p>Oferecemos uma ampla gama de soluções em seguros e serviços financeiros, cuidadosamente elaboradas
                     para proteger você, sua família, seus bens e sua empresa.</p>
             </div>
 
-            <div class="services-content">
+            <div class="services-content" data-aos="fade-up">
                 <div class="box">
                     <div class="box-content">
                         <div class="box-icon"><i class="ri-shield-check-line"></i></div>
@@ -202,7 +202,7 @@
                             <h3>Seguros</h3>
                             <p>Proteja o que realmente importa com soluções de seguros sob medida, garantindo
                                 tranquilidade em todas as situações!</p>
-                            <a href="#">Ver mais</a>
+                            <a href="#insurances">Ver mais</a>
                         </div>
 
                     </div>
@@ -217,7 +217,7 @@
                             <h3>Consórcios</h3>
                             <p>Realize seus sonhos de forma planejada com os melhores consórcios para veículos, imóveis
                                 e serviços!</p>
-                            <a href="#">Ver mais</a>
+                            <a href="#consortium">Ver mais</a>
                         </div>
 
                     </div>
@@ -240,8 +240,8 @@
 
         </section>
 
-        <section class="consorcium">
-            <div class="consorcium-bg">
+        <section class="consortium" id="consortium">
+            <div class="consortium-bg">
                 <img src="./dist/public/assets/images/backgrounds-svg/bg-arrows.svg" alt="Imagem decorativa de setas" />
                 <img src="./dist/public/assets/images/backgrounds-svg/bg-arrows.svg" alt="Imagem decorativa de setas" />
                 <img src="./dist/public/assets/images/backgrounds-svg/bg-dots.svg"
@@ -249,16 +249,20 @@
                 <img src="./dist/public/assets/images/backgrounds-svg/bg-dots.svg"
                     alt="Imagem decorativa de múltiplos pontos" />
             </div>
-            <div class="consorcium-title">
+            <div class="consortium-title" data-aos="fade-up">
                 <h2>Consórcios</h2>
                 <p></p>
             </div>
-            <div class="deck">
-                <div class="card">
+            <div class="deck" data-aos="zoom-in">
+                <div class="card" id="residential-consortium">
+                    <span class="border"></span>
+                    <span class="border"></span>
+                    <span class="border"></span>
+                    <span class="border"></span>
                     <div class="card-header">
                         <i class="ri-home-4-line"></i>
                         <span class="card-header-title">Consórcio Imobiliário</span>
-                        <span class="card-header-detail">32132</span>
+                        <span class="card-header-detail">&starf;</span>
                     </div>
                     <div class="card-body">
                         <p class="card-text">
@@ -266,8 +270,8 @@
                             Seguros. Sem juros, você adquire seu imóvel com parcelas ajustadas ao seu orçamento, sem
                             pressa e com total tranquilidade
                             <span class="card-text-link">
-                                <a href="">
-                                    Quero saber mais
+                                <a href="#insurances">
+                                    Quero saber mais &#10132;
                                 </a>
                             </span>
                         </p>
@@ -276,11 +280,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="automotive-consortium">
+                    <span class="border"></span>
+                    <span class="border"></span>
+                    <span class="border"></span>
+                    <span class="border"></span>
                     <div class="card-header">
                         <i class="ri-roadster-fill"></i>
                         <span class="card-header-title">Consórcio Automotivo</span>
-                        <span class="card-header-detail">32132</span>
+                        <span class="card-header-detail">&starf;</span>
                     </div>
                     <div class="card-body">
                         <p class="card-text">
@@ -289,7 +297,7 @@
                             segura.
                             <span class="card-text-link">
                                 <a href="">
-                                    Quero saber mais
+                                    Quero saber mais &#10132;
                                 </a>
                             </span>
                         </p>
@@ -298,19 +306,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="service-consortium">
+                    <span class="border"></span>
+                    <span class="border"></span>
+                    <span class="border"></span>
+                    <span class="border"></span>
                     <div class="card-header">
                         <i class="ri-tools-line"></i>
                         <span class="card-header-title">Consórcio de Serviços</span>
-                        <span class="card-header-detail">32132</span>
+                        <span class="card-header-detail">&starf;</span>
                     </div>
                     <div class="card-body">
                         <p class="card-text">
                             Realize grandes projetos, como viagens, reformas ou estudos, com o consórcio de serviços da
                             Acordo Seguros. Planeje suas conquistas sem juros, de forma prática e econômica.
                             <span class="card-text-link">
-                                <a href="">
-                                    Quero saber mais
+                                <a href="#">
+                                    Quero saber mais &#10132;
                                 </a>
                             </span>
                         </p>
@@ -323,19 +335,19 @@
 
         </section>
 
-        <section class="insurances">
-            <div class="insurances-title">
+        <section class="insurances" id="insurances">
+            <div class="insurances-title" data-aos="fade-up">
                 <h2>Seguros</h2>
                 <p></p>
             </div>
             <div class="insurances-content"></div>
         </section>
-        <section class="brands">
-            <div class="brands-title">
+        <section class="brands" id="brands">
+            <div class="brands-title" data-aos="fade-up">
                 <h2>Parceiros</h2>
                 <p></p>
             </div>
-            <div class="brands-content">
+            <div class="brands-content" data-aos="zoom-in">
 
                 <div class="brands-group">
                     <img src="./dist/public/assets/images/brands-svg/brands.svg" alt="">
@@ -365,10 +377,9 @@
     <script src="./dist/public/js/background.js" defer></script>
     <script src="./dist/public/js/variant.text.js" defer></script>
     <script src="./dist/public/js/particles.js" defer></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-
-
+        AOS.init();
     </script>
 </body>
 

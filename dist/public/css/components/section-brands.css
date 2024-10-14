@@ -91,6 +91,7 @@
   }
 }
 .brands img {
+  transform: translateY(-10px);
   height: 80px;
   display: grid;
   place-items: center;

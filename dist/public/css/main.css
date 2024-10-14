@@ -4,7 +4,7 @@
 @import "./components/background.css";
 @import "./components/section-hero.css";
 @import "./components/section-services.css";
-@import "./components/section-consorcium.css";
+@import "./components/section-consortium.css";
 @import "./components/section-brands.css";
 @import "./components/section-insurances.css";
 
@@ -24,6 +24,9 @@
   --color2: 21, 163, 98;
   --circle-size: 70%;
   --blending: hard-light;
+}
+html {
+  scroll-behavior: smooth;
 }
 * {
   font-family: var(--body-font);
@@ -69,6 +72,16 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+@media (max-width: 668px) {
+  main {
+    margin-top: 6rem;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    margin-top: 6rem;
+  }
 }
 section {
   width: 100vw;
