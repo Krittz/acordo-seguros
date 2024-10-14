@@ -3,6 +3,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
+  height: calc(100vh - 6rem);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -120,6 +121,9 @@
   font-size: 1.2rem;
   right: -10%;
 }
+.financing-content p :not(a) {
+  text-shadow: 0 0 10px black;
+}
 .financing-content p::before {
   position: absolute;
   content: "";
@@ -163,11 +167,11 @@
   opacity: 100%;
 }
 .financing-content p a:hover {
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
   box-shadow: inset 0 0 0.5em 0 var(--primary-color),
     0 0 0.5em 0 var(--primary-color);
   background: var(--primary-color);
-  color: var(--bg);
+  color: var(--text-color);
+  transform: scale(1.2);
 }
 @media (max-width: 768px) {
   .financing {
@@ -193,7 +197,7 @@
   .financing-content p {
     width: 90%;
     text-align: center;
-    padding-block: 5rem;
+    padding-block-end: 5rem;
     right: 0;
     align-items: center;
   }
