@@ -8,6 +8,7 @@
 @import "./components/section-brands.css";
 @import "./components/section-insurances.css";
 @import "./components/section-faq.css";
+@import "./components/section-financing.css";
 
 :root {
   --bg: #1a1e29;

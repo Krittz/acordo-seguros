@@ -6,7 +6,7 @@
   --scroll-end: calc(-100% - var(--gap));
 }
 .brands {
-  background: var(--bg-fade);
+  background: var(--bg);
   position: relative;
   display: flex;
   justify-content: space-evenly;
