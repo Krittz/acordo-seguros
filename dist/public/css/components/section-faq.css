@@ -1,0 +1,151 @@
+.faq {
+  background: var(--bg);
+  position: relative;
+  height: calc(100vh - 6rem);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.faq-title {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  text-align: center;
+  max-width: 40%;
+  position: relative;
+}
+
+.faq-title :first-child {
+  position: relative;
+  color: var(--title-color);
+  font-weight: 800;
+  font-size: 2rem;
+}
+.faq-title :first-child::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  top: 100%;
+  background: var(--primary-color);
+}
+.faq-title :last-child {
+  color: var(--text-color);
+  opacity: 50%;
+  font-size: 1em;
+}
+.faq-content {
+  margin-block: 10rem;
+  padding: 1rem;
+  max-width: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+.faq-content details {
+  width: 100%;
+  border: 1px solid var(--primary-color-extra-light);
+  border-radius: 7px;
+  outline-offset: 10px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+.faq-content details summary {
+  padding: 1rem;
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-content details summary span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.faq-content details summary span i {
+  color: var(--primary-color);
+  font-size: 1.3em;
+}
+.faq-content details summary::before {
+  content: "";
+  width: 2px;
+  height: 20px;
+  background: white;
+  display: inline-block;
+  transition: all 0.5s ease;
+  font-size: 1.6em;
+  transform: rotate(90deg);
+  opacity: 50%;
+}
+.faq-content details summary::after {
+  content: "";
+  position: absolute;
+  margin-top: 10px;
+  width: 2px;
+  height: 20px;
+  background: white;
+  display: inline-block;
+  transition: all 0.5s ease;
+  font-size: 1.6em;
+  transform: rotate(90deg);
+  opacity: 50%;
+}
+.faq-content details p {
+  padding: 1.5rem;
+}
+.faq-content details[open] {
+  background: var(--bg-fade);
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+.faq-content details[open] summary {
+  box-shadow: 0 1px 0 1px var(--primary-color);
+}
+.faq-content details[open] summary span {
+  opacity: 90%;
+  filter: blur(1px);
+}
+.faq-content details[open] summary::before {
+  background: var(--secondary-color);
+  transform: rotate(405deg);
+  opacity: 100%;
+  filter: drop-shadow(0 0 10px var(--secondary-color));
+}
+.faq-content details[open] summary::after {
+  margin-top: 0;
+  transform: rotate(-405deg);
+  background: var(--secondary-color);
+  opacity: 100%;
+  filter: drop-shadow(0 0 10px var(--secondary-color));
+}
+@media (max-width: 768px) {
+  .faq-title,
+  .faq-content {
+    max-width: 90%;
+  }
+  .faq-content details p {
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+}
+/* @media (max-width: 1118px) {
+  .faq {
+    height: 100%;
+  }
+} */
