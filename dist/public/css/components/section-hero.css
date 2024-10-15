@@ -1,7 +1,10 @@
 .hero {
-  background: var(--bg);
   position: relative;
   z-index: 1;
+}
+.heading {
+  width: 100%;
+  height: 100%;
 }
 #canvas {
   position: absolute;
@@ -22,11 +25,7 @@
   row-gap: 1rem;
   z-index: 2;
 }
-@media (max-width: 768px) {
-  .social-links {
-    display: none;
-  }
-}
+
 .social-links a {
   font-size: 1.75em;
   line-height: 1.5;
@@ -53,7 +52,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,14 +162,6 @@
   max-width: 40%;
   margin-bottom: 4rem;
 }
-@media (max-width: 768px) {
-  html {
-    overflow-x: hidden;
-  }
-  .hero-description {
-    max-width: 90%;
-  }
-}
 
 .main-btn {
   position: relative;
@@ -238,7 +228,14 @@
   background: var(--bg);
 }
 @media (max-width: 768px) {
+  
+  .hero-description {
+    max-width: 90%;
+  }
   .main-btn {
     transform: translateY(-3rem);
+  }
+  .social-links {
+    display: none;
   }
 }

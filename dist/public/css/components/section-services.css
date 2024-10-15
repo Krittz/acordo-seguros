@@ -4,9 +4,9 @@
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  background: var(--bg-fade);
+  height: 100%;
   position: relative;
-  height: calc(100vh - 6rem);
+  width: 100%;
   z-index: 1;
 }
 
