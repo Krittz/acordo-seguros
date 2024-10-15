@@ -273,3 +273,9 @@ nav {
     margin-inline: auto;
   }
 }
+@media only screen and (orientation: landscape) and (max-width: 993px) {
+  header{
+    display: none;
+  }
+}
+
