@@ -92,12 +92,14 @@ section {
   width: 100vw;
   height: 100vh;
 }
+
 section:nth-child(odd) {
   background: var(--bg);
 }
 section:nth-child(even) {
   background: var(--bg-fade);
 }
+
 
 .section-title {
   margin-top: 1rem;
@@ -135,10 +137,15 @@ section:nth-child(even) {
   .section-title {
     max-width: 90%;
   }
+  section:not(.hero) {
+    padding-inline: 15px;
+  }
 }
 @media only screen and (orientation: landscape) and (max-width: 993px) {
   main {
     margin-top: 0;
   }
-  
+  section:not(.hero) {
+    padding-inline: 15px;
+  }
 }

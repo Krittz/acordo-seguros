@@ -209,7 +209,7 @@ nav {
     transition: top 0.4s, opacity 0.3s;
   }
   .dropdown-content {
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(4, max-content);
     column-gap: 6rem;
     max-width: 1120px;
     margin-inline: auto;

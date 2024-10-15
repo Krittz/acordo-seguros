@@ -168,11 +168,9 @@
     padding: 0;
     padding-top: 3rem;
     padding-bottom: -5rem;
-    background: white;
   }
   .card-slide-content {
     justify-content: space-between;
-    background: black;
   }
   .card-slide-content .main-btn {
     margin: 0;
