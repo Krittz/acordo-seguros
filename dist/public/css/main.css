@@ -30,6 +30,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 * {
   font-family: var(--body-font);
@@ -134,3 +135,4 @@ section:nth-child(even) {
     max-width: 90%;
   }
 }
+

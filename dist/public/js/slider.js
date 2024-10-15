@@ -1,6 +1,6 @@
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
-  initialSlide: 5,  // Define o slide inicial
+  initialSlide: 5,
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: "auto",
@@ -16,18 +16,14 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-// Captura os links do menu
-const dropdownLinks = document.querySelectorAll('.dropdown-link');
+const dropdownLinks = document.querySelectorAll(".dropdown-link");
 
-// Adiciona o evento de clique para cada link
-dropdownLinks.forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault(); // Previne o comportamento padrão do link
-    
-    // Obtém o índice do slide através do atributo data-slide
-    const slideIndex = this.getAttribute('data-slide');
+dropdownLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
 
-    // Move o Swiper para o slide correspondente
+    const slideIndex = this.getAttribute("data-slide");
+
     swiper.slideTo(slideIndex);
   });
 });

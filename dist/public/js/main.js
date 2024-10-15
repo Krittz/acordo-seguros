@@ -1,5 +1,5 @@
 $(() => {
-    //On Scroll Functionality
+
     $(window).scroll(() => {
         var windowTop = $(window).scrollTop();
         windowTop > 100
@@ -8,7 +8,7 @@ $(() => {
         windowTop > 100 ? $("ul").css("top", "100px") : $("ul").css("top", "160px");
     });
 
-    //Click Logo To Scroll To Top
+
     $("#logo").on("click", () => {
         $("html,body").animate(
             {
@@ -18,7 +18,7 @@ $(() => {
         );
     });
 
-    //Smooth Scrolling Using Navigation Menu
+
     $('a[href*="#"]').on("click", function (e) {
         $("html,body").animate(
             {
@@ -29,7 +29,7 @@ $(() => {
         e.preventDefault();
     });
 
-    //Toggle Menu
+
     $("#menu-toggle").on("click", () => {
         $("#menu-toggle").toggleClass("closeMenu");
         $("ul").toggleClass("showMenu");
