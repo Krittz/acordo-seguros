@@ -2,8 +2,6 @@
 .financing {
   position: relative;
   z-index: 1;
-  width: 100%;
-  height: calc(100vh - 6rem);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -173,7 +171,7 @@
   color: var(--text-color);
   transform: scale(1.2);
 }
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-width: 1024px) {
   .financing {
     height: 100%;
   }
@@ -207,4 +205,7 @@
   .financing-content h3::before {
     display: none;
   }
+}
+
+@media (max-width: 1366px) {
 }

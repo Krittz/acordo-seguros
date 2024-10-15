@@ -215,7 +215,7 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 550px), (max-width: 1024px) {
   .deck:before {
     left: 1.5em;
   }
