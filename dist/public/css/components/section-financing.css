@@ -159,15 +159,13 @@
     margin-left: 0;
   }
   .financing-content p {
-    width: 90%;
+    width: 95%;
     text-align: center;
     padding-block-end: 5rem;
     align-items: center;
     left: 0;
   }
-  .financing-content p a {
-    left: 15%;
-  }
+
   .financing-content p::before {
     opacity: 10%;
   }
@@ -191,20 +189,7 @@
     z-index: -1;
     font-size: 15rem;
   }
-  .financing-content p {
-    position: relative;
-    width: 95%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-    margin: 0 auto;
-    border-radius: 12px;
-    padding-top: 5rem;
-    font-size: 1.2rem;
-    right: -10%;
-  }
+
   .financing-content p :not(a) {
     text-shadow: 0 0 10px black;
   }

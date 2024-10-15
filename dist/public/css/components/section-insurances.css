@@ -9,6 +9,23 @@
 .insurances-content {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.insurances-content ul {
+  width: 100%;
+  height: 100%;
   position: relative;
-  z-index: 1;
+  display: flex;
+}
+.insurances-content ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.insurances-card {
+  background: white;
+  height: 250px;
+  width: 500px;
 }
