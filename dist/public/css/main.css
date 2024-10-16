@@ -83,11 +83,7 @@ main {
     margin-top: 6rem;
   }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
-  main {
-    margin-top: 6rem;
-  }
-}
+
 section {
   width: 100vw;
   height: 100vh;

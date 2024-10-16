@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
+  min-height: 100%;
 }
 
 .insurances-bg img {
@@ -12,6 +13,7 @@
   z-index: -2;
   user-select: none;
   pointer-events: none;
+  opacity: 30%;
 }
 .insurances .insurances-bg img:first-of-type {
   right: 0;
@@ -145,19 +147,34 @@
   .card-slide-content .main-btn {
     margin-top: 2rem;
   }
-  .swiper-wrapper {
+  .insurances-content {
     max-height: 80%;
   }
   .insurances-bg {
     display: none;
   }
 }
-
+@media (max-width: 1024px) {
+  .insurances {
+    justify-content: space-between;
+  }
+  .card-slide {
+    padding: 0;
+    padding-top: 3rem;
+    padding-bottom: -5rem;
+  }
+  .card-slide-content {
+    justify-content: space-between;
+  }
+  .card-slide-content .main-btn {
+    margin: 0;
+    margin-top: 5rem;
+  }
+}
 @media only screen and (orientation: landscape) and (max-width: 993px) {
   .insurances {
     height: calc(100% + 6rem);
   }
-
   .card-slide {
     padding: 0;
     padding-top: 3rem;
