@@ -137,7 +137,7 @@
   color: var(--text-color);
   transform: scale(1.2);
 }
-@media (max-width: 768px), (max-width: 1024px) {
+@media (max-width: 768px), (max-width: 1024px), (max-width: 1280px) {
   .financing {
     height: 100%;
   }
@@ -162,64 +162,17 @@
     align-items: center;
     left: 0;
   }
-
   .financing-content p::before {
     opacity: 10%;
+    right: -20%;
   }
   .financing-content h3::before {
     display: none;
   }
 }
-
-@media (max-width: 1200px) {
-  .financing-content h3 {
-    max-width: 90%;
-  }
-  .financing-content h3::before {
-    content: "sonhos";
-    position: absolute;
-    top: -100%;
-    left: -5%;
-    text-align: justify;
-    opacity: 3%;
-    color: var(--text-color);
-    z-index: -1;
-    font-size: 15rem;
-  }
-
-  .financing-content p :not(a) {
-    text-shadow: 0 0 10px black;
-  }
+@media (max-width: 768px) {
   .financing-content p::before {
-    position: absolute;
-    content: "";
-    width: 400px;
-    height: 400px;
-    bottom: 50%;
-    z-index: -2;
-    right: -70%;
-    border: 40px dashed var(--primary-color);
-    border-radius: 50%;
-    transform: rotate(45deg);
-  }
-  .financing-content p a {
-    margin-top: 50px;
-    font-size: 1.6rem;
-    display: inline-block;
-    cursor: pointer;
-    color: var(--primary-color);
-    border: var(--primary-color) 1px solid;
-    padding: 0.25em 1em;
-    border-radius: 0.25em;
-    position: relative;
-    transition: all 0.3s ease;
-    font-weight: 600;
-  }
-  .financing-content img:first-of-type {
-    position: absolute;
-    z-index: -2;
-    top: -35%;
-    right: -40%;
-    opacity: 5%;
+    opacity: 10%;
+    right: -80%;
   }
 }
