@@ -1,9 +1,7 @@
 header {
-  position: fixed;
   width: 100vw;
   background: var(--bg);
   backdrop-filter: blur(40px);
-  z-index: 100;
 }
 nav {
   height: 6rem;
@@ -14,6 +12,7 @@ nav {
 @media (max-width: 768px) {
   header {
     position: fixed;
+    z-index: 10;
   }
 }
 
@@ -274,8 +273,8 @@ nav {
   }
 }
 @media only screen and (orientation: landscape) and (max-width: 993px) {
-  header{
-    display: none;
+  header {
+    position: fixed;
+    z-index: 10;
   }
 }
-

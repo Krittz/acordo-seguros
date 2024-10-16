@@ -152,18 +152,12 @@
     display: none;
   }
 }
-@media (max-width: 375px) {
-  .section-title p {
-    display: none;
-  }
-}
+
 @media only screen and (orientation: landscape) and (max-width: 993px) {
   .insurances {
     height: calc(100% + 6rem);
   }
-  .insurances .section-title {
-    max-width: 100%;
-  }
+
   .card-slide {
     padding: 0;
     padding-top: 3rem;

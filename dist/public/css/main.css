@@ -100,7 +100,6 @@ section:nth-child(even) {
   background: var(--bg-fade);
 }
 
-
 .section-title {
   margin-top: 1rem;
   display: flex;
@@ -145,7 +144,11 @@ section:nth-child(even) {
   main {
     margin-top: 0;
   }
+
   section:not(.hero) {
     padding-inline: 15px;
+  }
+  .section-title {
+    max-width: 90%;
   }
 }
