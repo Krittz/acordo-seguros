@@ -10,3 +10,31 @@
   width: 100%;
   height: 100%;
 }
+.tracking-bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.tracking-bg :first-child {
+  position: absolute;
+  opacity: 1%;
+}
+.tracking-bg :nth-child(2) {
+  position: absolute;
+  top: 0;
+}
+.tracking-bg :last-child {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  rotate: 45deg;
+  border-radius: 100%;
+  opacity: 25%;
+  background-color: var(--primary-color);
+  filter: blur(100px);
+}
