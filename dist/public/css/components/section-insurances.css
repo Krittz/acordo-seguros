@@ -87,7 +87,7 @@
   transition: all 0.3s ease;
   box-shadow: 0 0 10px var(--primary-color);
 }
-.swiper-slide-active::after { 
+.swiper-slide-active::after {
   content: "";
   position: absolute;
   bottom: -10px;
