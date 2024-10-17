@@ -161,55 +161,43 @@
 .tracking-btn:hover::after {
   width: 100%;
 }
-@media (max-width: 667px) {
+@media (max-width: 768px) {
   .tracking {
+    width: 100%;
     height: 100%;
   }
   .tracking-content {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
+    padding: 1rem;
   }
-  .tracking-card {
+
+  .tracking-card:first-of-type {
     position: initial;
-    flex-direction: row;
-    overflow: scroll;
-    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+    padding-block: 1.5rem;
   }
-  .tracking-card span {
-    display: none;
+
+  .tracking-card:last-of-type {
+    position: initial;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+    padding-block: 1.5rem;
+  }
+  .tracking-card:hover {
+    transform: scale(1);
   }
 }
 
-@media (max-width: 768px) {
-  .tracking {
-    height: 100%;
-  }
-  .tracking-content {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    flex-direction: column;
-  }
-  .tracking-card {
-    margin-block: 20px;
-    height: 20rem;
-    width: 100%;
-    position: initial;
-  }
-  .tracking-card span {
-    display: none;
-  }
-}
 @media (max-width: 344px) {
   .tracking {
     height: 100%;
@@ -254,7 +242,6 @@
     width: 80%;
     position: initial;
     border-bottom: 2px solid var(--secondary-color);
-
   }
   .tracking-card:hover {
     transform: scale(1.1);
