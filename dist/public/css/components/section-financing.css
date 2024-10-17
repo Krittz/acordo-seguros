@@ -176,3 +176,51 @@
     right: -80%;
   }
 }
+@media (max-width: 1366px) {
+  .financing {
+    height: 100%;
+  }
+  .financing-content {
+    justify-content: center;
+    align-items: center;
+  }
+  .financing-content h3 {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .financing-content p {
+    width: 95%;
+    text-align: center;
+    padding-block-end: 5rem;
+    align-items: center;
+    left: 0;
+  }
+  .financing-content p::before {
+    opacity: 10%;
+    right: -20%;
+  }
+  .financing-content h3::before {
+    font-size: 10rem;
+  }
+  .financing-content img:first-of-type {
+    height: 100%;
+    bottom: 0;
+    top: 0;
+  }
+  .financing-content img:nth-of-type(2){
+    position: absolute;
+    z-index: -1;
+    right: -10%;
+    width: 30%;
+    top: -75%;
+    height: 100%;
+    border-bottom-right-radius: 100%;
+    transform: rotate(90deg);
+  }
+  .financing-content img:last-of-type {
+    height: 100vh;
+  }
+}
