@@ -8,10 +8,7 @@
   height: 100%;
   z-index: 1;
 }
-@media (max-width: 768px), (max-width: 1118px) {
-  html {
-    overflow-x: hidden;
-  }
+@media (max-width: 768px), (max-width: 1366px) {
   .services {
     height: 100%;
   }
