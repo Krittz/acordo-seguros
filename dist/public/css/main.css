@@ -11,6 +11,7 @@
 @import "./components/section-financing.css";
 @import "./components/section-tracking.css";
 @import "./components/section-contact.css";
+@import "./components/footer.css";
 :root {
   --bg: #1a1e29;
   --dark: #30344c;
