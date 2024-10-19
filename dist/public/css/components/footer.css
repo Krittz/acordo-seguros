@@ -61,7 +61,6 @@
   flex-direction: column;
   color: var(--text-color);
   opacity: 75%;
-  letter-spacing: 2px;
 }
 .footer-info-phones,
 .footer-info-email,
@@ -86,9 +85,7 @@
   .footer-logo p {
     max-width: 95%;
   }
-  .footer-info {
-    letter-spacing: 0;
-  }
+
   .footer-info-phones {
     flex-direction: column;
   }

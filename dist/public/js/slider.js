@@ -1,5 +1,6 @@
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
+  loop: true,
   initialSlide: 5,
   grabCursor: true,
   centeredSlides: true,
@@ -22,8 +23,8 @@ dropdownLinks.forEach((link) => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
 
-    const slideIndex = this.getAttribute("data-slide");
+    const slideIndex = parseInt(this.getAttribute("data-slide"));
 
-    swiper.slideTo(slideIndex);
+    swiper.slideToLoop(slideIndex);
   });
 });

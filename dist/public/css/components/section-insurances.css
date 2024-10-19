@@ -122,10 +122,10 @@
 .swiper-slide:not(.swiper-slide-active) .main-btn {
   transform: scale(0.5);
 }
-.card-slide:nth-of-type(odd) {
+.card-slide.odd {
   background: #25283a;
 }
-.card-slide:nth-of-type(even) {
+.card-slide.even {
   background: var(--dark);
 }
 
@@ -155,11 +155,11 @@
 .card-slide-content .main-btn {
   background: transparent;
 }
-.card-slide:nth-of-type(odd) .card-slide-content .main-btn:hover {
+.card-slide.odd .card-slide-content .main-btn:hover {
   background: var(--primary-color);
   color: #25283a;
 }
-.card-slide:nth-of-type(even) .card-slide-content .main-btn:hover {
+.card-slide.even .card-slide-content .main-btn:hover {
   background: var(--primary-color);
   color: var(--dark);
 }
