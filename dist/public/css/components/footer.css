@@ -60,16 +60,16 @@
   align-items: center;
   flex-direction: column;
   color: var(--text-color);
-  opacity: 75%;
 }
 .footer-info-phones,
 .footer-info-email,
-.footer-info-local {
+.footer-info-local,
+.footer-info-reg {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-block: 0.5rem;
-  font-size: 0.85em;
+  font-size: 1em;
 }
 
 .footer-info-phones span {
