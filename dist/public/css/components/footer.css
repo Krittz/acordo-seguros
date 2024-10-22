@@ -73,7 +73,8 @@
   text-decoration: none;
 }
 
-.footer-info-phones p a[href^="tel"] {
+.footer-info p a[href^="tel"],
+.footer-info p a[href^="mailto"] {
   color: var(--text-color);
   text-decoration: none;
 }
