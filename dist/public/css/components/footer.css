@@ -59,7 +59,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
 }
 .footer-info-phones,
 .footer-info-email,
@@ -71,8 +70,13 @@
   padding-block: 0.5rem;
   font-size: 1em;
   color: var(--text-color);
+  text-decoration: none;
 }
 
+.footer-info-phones p a[href^="tel"] {
+  color: var(--text-color);
+  text-decoration: none;
+}
 .footer-info-phones span {
   width: 1px;
   height: 20px;
@@ -89,6 +93,7 @@
 
   .footer-info-phones {
     flex-direction: column;
+    color: var(--text-color);
   }
   .footer-info-phones span {
     height: 1px;

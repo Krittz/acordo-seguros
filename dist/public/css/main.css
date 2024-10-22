@@ -17,7 +17,7 @@
   --dark: #30344c;
   --bg-fade: #191e29f6;
   --title-color: rgb(203, 206, 211);
-  --text-color: rgb(233, 239, 236);
+  --text-color: #e9efec;
   --primary-color: rgb(21, 163, 98);
   --primary-color-fade: #27b475;
   --primary-color-extra-light: #aaf7d43b;
@@ -45,7 +45,7 @@ html {
 
 a {
   text-decoration: none;
-}
+  }
 ul,
 ol {
   list-style: none;
